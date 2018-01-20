@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+header {
+    height: auto;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;    
+}
+
+.topmenu.ui-menubar {
+    font-size: 1.3em;
+}
+
+.topmenu.ui-menubar, .topmenu .ui-widget-content  {
+    background-color: red;
+    color: white;
+    border-radius: 0;   
+}
+
+.topmenu.ui-menubar a {
+    color: white;
+}
+
+.topmenu.ui-menu .ui-menuitem .ui-menuitem-link {
+    color: white;
+}
+
+.topmenu.ui-menubar .ui-menuitem .ui-menuitem-link:hover {
+    background-color: red;
+}
+
+.topmenu .ui-state-active {
+    background-color: red;
+}
+
+.topmenu.ui-menubar .ui-menuitem.ui-menuitem-active > .ui-menuitem-link {
+    background-color: red;
+}
