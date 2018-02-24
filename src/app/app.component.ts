@@ -44,7 +44,41 @@ export class AppComponent implements OnInit {
             ]
           }
         ]
-      }
+      },
+      {
+        label: "Verein",
+        items: [
+          { label: "Trainer" },
+          { label: "Vorstandschaft" },
+          { label: "Förderverein" },
+          { label: "Jugendvorstandschaft" }
+        ]
+      },
+      {
+        label: "Seniorenfussball"
+      },
+      {
+        label: "Schiedsrichter"
+      },
+      {
+        label: "Termine"
+      },
+      {
+        label: "Kontakt"
+      },
+      {
+        label: "Mitglied werden"
+      },
+      {
+        label: "SVD Bus"
+      },
+      {
+        label: "Intern",
+        items: [
+          { label: "Grillplan" },
+          { label: "Vereinsbewirtung" }
+        ]
+      },
     ];
   }
 }

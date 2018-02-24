@@ -1,39 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  font-family: Lato;
+}
+
+.ui-widget {
+  font-family: Lato;
+}
+
 header {
-    height: auto;
-    text-align: center;
+  height: auto;
+  text-align: center;
 }
 
 header img {
-    max-width: 100%;    
+  max-width: 100%;
 }
 
 .topmenu.ui-menubar {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 
-.topmenu.ui-menubar, .topmenu .ui-widget-content  {
-    background-color: red;
-    color: white;
-    border-radius: 0;   
+.topmenu.ui-menubar,
+.topmenu .ui-widget-content {
+  background-color: red;
+  color: white;
+  border-radius: 0;
 }
 
 .topmenu.ui-menubar a {
-    color: white;
+  color: white;
 }
 
 .topmenu.ui-menu .ui-menuitem .ui-menuitem-link {
-    color: white;
+  color: white;
 }
 
 .topmenu.ui-menubar .ui-menuitem .ui-menuitem-link:hover {
-    background-color: red;
+  background-color: red;
 }
 
 .topmenu .ui-state-active {
-    background-color: red;
+  background-color: red;
 }
 
 .topmenu.ui-menubar .ui-menuitem.ui-menuitem-active > .ui-menuitem-link {
-    background-color: red;
+  background-color: red;
+}
+
+.dateQuote {
+  font-size: 70%;
+  margin: 5px;
+}
+
+.readMore {
+  color: red;
+}
+
+.blogPost {
+  border-bottom: 1px dashed red;
+  padding-bottom: 15px;
+}
+
+.blogHeaderPost img {
+  display: block;
+  margin: 0 auto;
+  max-height: 323px;
+}
+
+.blogHeaderPost .headerTitle {
+  margin-top: -30px;
+  height: 30px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  background: rgba(190, 190, 190, 0.6);
+}
+
+.startGallery img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.startGallery .ui-galleria-panel {
+  position: relative;
+}
+
+.calEvent {
+  margin-bottom: 5px;
+}
+
+.calDate {
+  font-weight: bold;
+  width: 100%;
 }

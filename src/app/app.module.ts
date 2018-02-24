@@ -5,22 +5,22 @@ import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app.component";
 import { StartComponent } from "./start/start.component";
-import {MenubarModule} from "primeng/primeng";
+import { MenubarModule, GalleriaModule } from "primeng/primeng";
 import { HttpService } from "./services/http.service";
 import { HttpClientModule } from "@angular/common/http";
+import { RightComponent } from "./right/right.component";
+import { ToolsService } from "./services/tools.service";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    StartComponent
-  ],
+  declarations: [AppComponent, StartComponent, RightComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MenubarModule,
-    HttpClientModule
+    HttpClientModule,
+    GalleriaModule
   ],
-  providers: [HttpService],
+  providers: [HttpService, ToolsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

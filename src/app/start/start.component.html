@@ -1,3 +1,9 @@
-<p>
-    <a class="waves-effect waves-light btn" (click)="getCategories()">button</a>
-</p>
+<p-galleria [images]="headerImages" panelWidth="100%" transitionInterval="5000" [showCaption]="true" styleClass="startGallery"></p-galleria>
+<div class="blogPost" *ngFor="let post of posts">
+    <h3 class="blogShort" [innerHtml]="post.title"></h3>
+    <blockquote class="dateQuote">{{post.date.day}}.{{post.date.month}}</blockquote>
+    <div class="blogShort" [innerHtml]="post.content.brief" [hidden]="showLongText"></div>
+    <div class="readMore" (click)="showLongText = true" [hidden]="showLongText">...Mehr...</div>
+    <div class="blogExtended" [innerHtml]="post.content.extended" [hidden]="!showLongText"></div>
+    <div class="readMore" (click)="showLongText = false" [hidden]="!showLongText">...Weniger...</div>
+</div>

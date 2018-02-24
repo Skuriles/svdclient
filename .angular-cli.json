@@ -7,10 +7,7 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
+      "assets": ["assets", "favicon.ico"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -18,15 +15,17 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": [
-        "styles.css",
+      "styles": [        
+        "../node_modules/lato-font/css/lato-font.min.css",        
         "../node_modules/primeng/resources/primeng.min.css",
         "../node_modules/materialize-css/dist/css/materialize.min.css",
         "../node_modules/primeng/resources/themes/flick/theme.css",
-        "../node_modules/font-awesome/css/font-awesome.min.css"
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "styles.css"
       ],
       "scripts": [
-        "../node_modules/materialize-css/dist/js/materialize.min.js"
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/materialize-css/dist/js/materialize.min.js" 
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -64,6 +63,6 @@
     "component": {},
     "serve": {
       "port": 4201
-  }
+    }
   }
 }

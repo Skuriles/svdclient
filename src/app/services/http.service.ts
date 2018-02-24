@@ -5,13 +5,24 @@ import { MyConstants } from "../constants/myConstants";
 @Injectable()
 export class HttpService {
   constructor(private http: HttpClient) {}
-  
-  public api = "blog/";
 
-  public getCategories(): any {
-    const nodeUrl = this.api + "getCategories";
+  public blogApi = "blog/";
+  public calApi = "calendar/";
+
+  public getPostsByCategory(categories: string[]): any {
+    const nodeUrl = this.blogApi + "getPostsByCategory";
+    return this.postRequest(nodeUrl, categories);
+  }
+
+  public getCalendar(): any {
+    const nodeUrl = this.calApi + "getCalendar";
     return this.postRequest(nodeUrl, null);
-  }  
+  }
+
+  public getPlayCalendar(): any {
+    const nodeUrl = this.calApi + "getPlayCalendar";
+    return this.postRequest(nodeUrl, null);
+  }
 
   // default http requests
   private postRequest(nodeUrl: string, body: object) {
@@ -25,5 +36,5 @@ export class HttpService {
         sessionStorage.getItem(MyConstants.token)
       )
     });
-  }  
+  }
 }

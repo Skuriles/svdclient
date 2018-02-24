@@ -1,5 +1,5 @@
 {
-    "/api/*": {
+    "/calendar/*": {
         "target": "http://localhost:61002",
         "secure": false,
         "logLevel": "debug"
