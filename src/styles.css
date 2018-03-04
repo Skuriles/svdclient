@@ -17,6 +17,22 @@ header img {
   max-width: 100%;
 }
 
+.container {
+  max-width: none;
+  float: left;
+}
+
+.container .row {
+  margin: 0;
+}
+
+.row .col {
+  padding: 0;
+}
+
+.topmenu {
+}
+
 .topmenu.ui-menubar {
   font-size: 1.3em;
 }
@@ -86,13 +102,4 @@ header img {
 
 .startGallery .ui-galleria-panel {
   position: relative;
-}
-
-.calEvent {
-  margin-bottom: 5px;
-}
-
-.calDate {
-  font-weight: bold;
-  width: 100%;
 }

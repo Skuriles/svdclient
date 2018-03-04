@@ -1,0 +1,16 @@
+.calEvent {
+  margin-bottom: 5px;
+}
+
+.calDate {
+  font-weight: bold;
+  width: 100%;
+}
+
+.termine {
+  margin: 10px;
+}
+
+.termine h5 {
+  text-align: center;
+}

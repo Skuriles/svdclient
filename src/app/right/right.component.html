@@ -1,10 +1,12 @@
+<div class="termine">
 <h5>Termine</h5>
 <div *ngFor="let event of events" class="calEvent">
-  <div class="calDate">{{event.start}}</div> 
+  <div class="calDate">{{event.start}}<span *ngIf="event.end">- {{event.end}}</span></div> 
   <div class="calSummary"> {{event.summary}}</div>
 </div>
 <h5>Spieltage</h5>
 <div *ngFor="let event of playEvents" class="calEvent">
   <div class="calDate">{{event.start}}</div> 
-  <div class="calSummary"> {{event.summary}}</div>
+  <div class="calSummary" [innerHtml]="event.summary"></div>
+</div>
 </div>

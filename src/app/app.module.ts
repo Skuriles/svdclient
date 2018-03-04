@@ -10,9 +10,14 @@ import { HttpService } from "./services/http.service";
 import { HttpClientModule } from "@angular/common/http";
 import { RightComponent } from "./right/right.component";
 import { ToolsService } from "./services/tools.service";
+import { AdvertsComponent } from './adverts/adverts.component';
+import { TrainerComponent } from './trainer/trainer.component';
+import { VorstandComponent } from './vorstand/vorstand.component';
+import { JugendVorstandComponent } from './jugend-vorstand/jugend-vorstand.component';
+import { FoerderVorstandComponent } from './foerder-vorstand/foerder-vorstand.component';
 
 @NgModule({
-  declarations: [AppComponent, StartComponent, RightComponent],
+  declarations: [AppComponent, StartComponent, RightComponent, AdvertsComponent, TrainerComponent, VorstandComponent, JugendVorstandComponent, FoerderVorstandComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

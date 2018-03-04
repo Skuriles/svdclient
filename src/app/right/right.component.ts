@@ -4,7 +4,8 @@ import { CalEvent } from "../classes/calendar/cal-event";
 
 @Component({
   selector: "app-right-sidebar",
-  templateUrl: "./right.component.html"
+  templateUrl: "./right.component.html",
+  styleUrls: ["./right.component.css"]
 })
 export class RightComponent implements OnInit {
   public events: CalEvent[];
