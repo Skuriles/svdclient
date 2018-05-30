@@ -1,12 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { MenuItem } from "primeng/primeng";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html"
 })
 export class AppComponent implements OnInit {
-  public items: MenuItem[];
+  public items: any[];
 
   ngOnInit() {
     this.items = [
@@ -74,11 +73,8 @@ export class AppComponent implements OnInit {
       },
       {
         label: "Intern",
-        items: [
-          { label: "Grillplan" },
-          { label: "Vereinsbewirtung" }
-        ]
-      },
+        items: [{ label: "Grillplan" }, { label: "Vereinsbewirtung" }]
+      }
     ];
   }
 }

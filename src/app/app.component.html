@@ -3,7 +3,15 @@
 </header>
 <app-adverts></app-adverts>
 <div class="container">
-  <p-menubar [model]="items" styleClass="topmenu" [autoDisplay]="false"></p-menubar>
+    <nav>
+        <div class="nav-wrapper">          
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li *ngFor="let item of items"><a href="/{{item.routerLink}}">{{item.label}}</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>  
   <div class="row">
     <div class="col s10">
       <router-outlet></router-outlet>

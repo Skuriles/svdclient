@@ -1,4 +1,3 @@
-<p-galleria [images]="headerImages" panelWidth="100%" transitionInterval="5000" [showCaption]="true" styleClass="startGallery"></p-galleria>
 <div class="blogPost" *ngFor="let post of posts">
     <h3 class="blogShort" [innerHtml]="post.title"></h3>
     <blockquote class="dateQuote">{{post.date.day}}.{{post.date.month}}</blockquote>
