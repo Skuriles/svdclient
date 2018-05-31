@@ -3,17 +3,159 @@
 </header>
 <app-adverts></app-adverts>
 <div class="container">
-    <nav>
-        <div class="nav-wrapper">          
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li *ngFor="let item of items"><a href="/{{item.routerLink}}">{{item.label}}</a></li>            
-          </ul>
-        </div>
-      </nav>  
+  <ul id="spielbetrieb" class="dropdown-content dropdownSpielbetrieb">
+    <li>
+      <a routerLink="/herren_1">Herren 1</a>
+    </li>
+    <li>
+      <a routerLink="/herren_2">Herren 2</a>
+    </li>
+    <li>
+      <a routerLink="/herren_3">Herren 3</a>
+    </li>
+    <li>
+      <a routerLink="/damen_1">Damen 1</a>
+    </li>
+    <li>
+      <a routerLink="/damen_2">Damen 2</a>
+    </li>
+    <li>
+      <a routerLink="/jugend_a">A-Jugend</a>
+    </li>
+    <li>
+      <a routerLink="/jugend_b">B-Jugend</a>
+    </li>
+    <li>
+      <a routerLink="/jugend_c">C-Jugend</a>
+    </li>
+    <li>
+      <a routerLink="/jugend_d1">D1-Jugend</a>
+    </li>
+    <li>
+      <a routerLink="/jugend_d2">D2-Jugend</a>
+    </li>
+    <li>
+      <a routerLink="/jugend_e1">E1-Jugend</a>
+    </li>
+    <li>
+      <a routerLink="/jugend_e2">E2-Jugend</a>
+    </li>
+    <li>
+      <a routerLink="/jugendm_b1">B1-Juniorinnen</a>
+    </li>
+    <li>
+      <a routerLink="/jugendm_b2">B2-Juniorinnen</a>
+    </li>
+    <li>
+      <a routerLink="/jugendm_c1">C1-Juniorinnen</a>
+    </li>
+    <li>
+      <a routerLink="/jugendm_c2">C2-Juniorinnen</a>
+    </li>
+    <li>
+      <a routerLink="/jugendm_d">D-Juniorinnen</a>
+    </li>
+    <li>
+      <a routerLink="/jugend_f">F-Jugend</a>
+    </li>
+    <li>
+      <a routerLink="/jugend_bam">Bambinis</a>
+    </li>
+  </ul>
+  <ul id="verein" class="dropdown-content dropdownSpielbetrieb">
+    <li>
+      <a routerLink="/trainer">Trainer</a>
+    </li>
+    <li>
+      <a routerLink="/vorstand">Vorstandschaft</a>
+    </li>
+    <li>
+      <a routerLink="/trainer">Jugend Vorstandschaft</a>
+    </li>
+    <li>
+      <a routerLink="/trainer">Förderverein</a>
+    </li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul id="nav-mobile" class="hide-on-med-and-down">
+        <li>
+          <a routerLink="/start">Start</a>
+        </li>
+        <li>
+          <a materialize="dropdown" class="dropdown-trigger" href="#!" data-target="spielbetrieb">Spielbetrieb</a>
+        </li>
+        <li>
+          <a materialize="dropdown" class="dropdown-trigger" href="#!" data-target="verein">Verein</a>
+        </li>
+        <li>
+          <a routerLink="/senioren">Seniorenfussball</a>
+        </li>
+        <li>
+          <a routerLink="/schiri">Schiedsrichter</a>
+        </li>
+        <li>
+          <a routerLink="/termine">Termine</a>
+        </li>
+        <li>
+          <a routerLink="/kontakt">Kontakt</a>
+        </li>
+        <li>
+          <a routerLink="/mitglied">Mitglied werden</a>
+        </li>
+        <li>
+          <a routerLink="/bus">SVD Bus</a>
+        </li>
+        <li>
+          <a routerLink="/intern">Intern</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <ul materialize="sidenav" class="sidenav" id="mobile-menu">
+    <ul id="nav-mobile">
+      <li>
+        <a routerLink="/start">Start</a>
+      </li>
+      <li>
+        <a materialize="dropdown" class="dropdown-trigger" href="#!" data-target="spielbetrieb">Spielbetrieb</a>
+      </li>
+      <li>
+        <a materialize="dropdown" class="dropdown-trigger" href="#!" data-target="verein">Verein</a>
+      </li>
+      <li>
+        <a routerLink="/senioren">Seniorenfussball</a>
+      </li>
+      <li>
+        <a routerLink="/schiri">Schiedsrichter</a>
+      </li>
+      <li>
+        <a routerLink="/termine">Termine</a>
+      </li>
+      <li>
+        <a routerLink="/kontakt">Kontakt</a>
+      </li>
+      <li>
+        <a routerLink="/mitglied">Mitglied werden</a>
+      </li>
+      <li>
+        <a routerLink="/bus">SVD Bus</a>
+      </li>
+      <li>
+        <a routerLink="/intern">Intern</a>
+      </li>
+    </ul>
+  </ul>
+
   <div class="row">
     <div class="col s10">
       <router-outlet></router-outlet>
     </div>
-    <div class="col s2"><app-right-sidebar></app-right-sidebar></div>
+    <div class="col s2 hide-on-med-and-down">
+      <app-right-sidebar></app-right-sidebar>
+    </div>
   </div>
 </div>

@@ -14,6 +14,7 @@ import { TrainerComponent } from "./trainer/trainer.component";
 import { VorstandComponent } from "./vorstand/vorstand.component";
 import { JugendVorstandComponent } from "./jugend-vorstand/jugend-vorstand.component";
 import { FoerderVorstandComponent } from "./foerder-vorstand/foerder-vorstand.component";
+import { DefaultArticleComponent } from "./default-article/default-article-component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FoerderVorstandComponent } from "./foerder-vorstand/foerder-vorstand.co
     TrainerComponent,
     VorstandComponent,
     JugendVorstandComponent,
-    FoerderVorstandComponent
+    FoerderVorstandComponent,
+    DefaultArticleComponent
   ],
   imports: [
     BrowserModule,
