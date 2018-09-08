@@ -1,7 +1,7 @@
-import { MaterializeModule } from "angular2-materialize";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { StartComponent } from "./start/start.component";
@@ -28,12 +28,7 @@ import { DefaultArticleComponent } from "./default-article/default-article-compo
     FoerderVorstandComponent,
     DefaultArticleComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MaterializeModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [HttpService, ToolsService],
   bootstrap: [AppComponent]
 })

@@ -15,6 +15,10 @@ export class StartComponent implements OnInit {
 
   constructor(private httpService: HttpService, private tools: ToolsService) {}
 
+  public images = [1, 2, 3].map(
+    () => `https://picsum.photos/900/500?random&t=${Math.random()}`
+  );
+
   public ngOnInit() {
     this.getPostByCategories();
     this.getHeaderPosts();

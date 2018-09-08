@@ -1,3 +1,11 @@
-.dropdownSpielbetrieb {
-  min-width: 175px;
+.menumenu {
+    background-color: red;
+}
+
+.menumenu li a {
+    color: white;
+}
+
+.menumenu li a:hover {
+    background-color: blue;
 }
