@@ -9,3 +9,18 @@
 .menumenu li a:hover {
     background-color: blue;
 }
+
+.navbar {
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+.nav-item {
+    min-width: 100px;
+    border-right: 1px solid white;
+}
+
+.nav-item a:hover {
+    color: red !important;
+    background-color: white !important;
+}

@@ -10,16 +10,13 @@ import { ToolsService } from "../services/tools.service";
 export class StartComponent implements OnInit {
   public posts: Post[];
   public headerPosts: Post[];
-  public headerImages: HeaderImage[];
   public showLongText = false;
 
   constructor(private httpService: HttpService, private tools: ToolsService) {}
 
-  public images = [1, 2, 3].map(
-    () => `https://picsum.photos/900/500?random&t=${Math.random()}`
-  );
-
   public ngOnInit() {
+    this.headerPosts = [];
+    this.posts = [];
     this.getPostByCategories();
     this.getHeaderPosts();
   }
@@ -41,17 +38,14 @@ export class StartComponent implements OnInit {
       .getPostsByCategory(["header"])
       .subscribe((posts: Post[]) => {
         this.headerPosts = posts;
-        this.headerImages = [];
         for (let i = 0; i < this.headerPosts.length; i++) {
           const post = this.headerPosts[i];
           post.date = this.tools.createPostDate(post.publishedDate);
-          const image = new HeaderImage(
-            post.title,
-            post.image.url,
-            post.content.brief
-          );
-          this.headerImages.push(image);
         }
       });
+  }
+
+  public openPost(id: string) {
+    console.log(id + " open Post");
   }
 }
