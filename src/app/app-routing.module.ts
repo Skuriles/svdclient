@@ -10,6 +10,10 @@ const routes: Routes = [
     component: StartComponent
   },
   {
+    path: "post/:id",
+    component: DefaultArticleComponent
+  },
+  {
     path: "herren_1",
     component: DefaultArticleComponent
   },
@@ -19,11 +23,13 @@ const routes: Routes = [
   },
   {
     path: "",
-    component: StartComponent
+    redirectTo: "/start",
+    pathMatch: "full"
   },
   {
-    path: "*",
-    component: StartComponent
+    path: "**",
+    redirectTo: "/start",
+    pathMatch: "full"
   }
 ];
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { MenuBarItem } from "./classes/helper/menuBar";
+import { HttpService } from "./services/http.service";
 
 @Component({
   selector: "app-root",
@@ -6,7 +8,17 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  public items: any[];
+  public menuBar: MenuBarItem[];
 
-  ngOnInit() {}
+  constructor(private httpService: HttpService) {}
+
+  ngOnInit() {
+    this.getMenuBar();
+  }
+
+  public getMenuBar() {
+    this.httpService.getMenuBar().subscribe(menuBar => {
+      this.menuBar = menuBar.menuBarItems;
+    });
+  }
 }

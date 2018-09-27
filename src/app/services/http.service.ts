@@ -7,13 +7,26 @@ export class HttpService {
   constructor(private http: HttpClient) {}
 
   public blogApi = "blog/";
+  public fileApi = "files/";
   public calApi = "calendar/";
+
+  //fileRoutes
+  public getMenuBar(): any {
+    const nodeUrl = this.fileApi + "getMenu";
+    return this.postRequest(nodeUrl, null);
+  }
+  // postRoutes
+  public getPostById(id: string): any {
+    const nodeUrl = this.blogApi + "getPostById";
+    return this.postRequest(nodeUrl, { id });
+  }
 
   public getPostsByCategory(categories: string[]): any {
     const nodeUrl = this.blogApi + "getPostsByCategory";
     return this.postRequest(nodeUrl, categories);
   }
 
+  //calendar routes
   public getCalendar(): any {
     const nodeUrl = this.calApi + "getCalendar";
     return this.postRequest(nodeUrl, null);

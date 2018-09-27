@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { HttpService } from "../services/http.service";
 import { Post, HeaderImage } from "../classes/Posts/post";
 import { ToolsService } from "../services/tools.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-start",
@@ -12,7 +13,11 @@ export class StartComponent implements OnInit {
   public headerPosts: Post[];
   public showLongText = false;
 
-  constructor(private httpService: HttpService, private tools: ToolsService) {}
+  constructor(
+    private httpService: HttpService,
+    private tools: ToolsService,
+    private router: Router
+  ) {}
 
   public ngOnInit() {
     this.headerPosts = [];
@@ -45,7 +50,7 @@ export class StartComponent implements OnInit {
       });
   }
 
-  public openPost(id: string) {
-    console.log(id + " open Post");
+  public openPost(postId: string) {
+    this.router.navigate(["/post", postId]);
   }
 }
