@@ -12,10 +12,11 @@
 
   <div class="navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarContent">
     <ul id="nav-mobile" class="navbar-nav mr-auto menumenu">
-      <li class="nav-item" [ngClass]="{'dropdown': item.childs}" [routerLinkActive]="['active']" *ngFor="let item of menuBar">
-        <a class="nav-link" [ngClass]="{'dropdown-toggle': item.childs}" [routerLink]="[item.path]" (click)="openChild = !openChild"
-          id="item.name">{{item.name}}</a>
-        <div *ngIf="item.childs" class="dropdown-menu" [hidden]="!openChild">
+      <li class="nav-item" [ngClass]="{'dropdown': item.childs}" [routerLinkActive]="['active']" *ngFor="let item of menuBar"
+        ngbDropdown>
+        <a *ngIf="item.childs" class="nav-link" [ngClass]="dropdown-toggle" id="{{item.name}}" ngbDropdownToggle>{{item.name}}</a>
+        <a *ngIf="!item.childs" class="nav-link" [routerLink]="[item.path]" id="{{item.name}}">{{item.name}}</a>
+        <div *ngIf="item.childs" class="dropdown-menu" ngbDropdownMenu attr.aria-labelledby="{{item.name}}">
           <a class="dropdown-item" [routerLink]="[child.path]" *ngFor="let child of item.childs">{{child.name}}</a>
         </div>
       </li>

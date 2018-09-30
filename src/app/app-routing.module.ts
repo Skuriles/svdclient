@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { StartComponent } from "./start/start.component";
 import { DefaultArticleComponent } from "./default-article/default-article-component";
 import { TrainerComponent } from "./trainer/trainer.component";
+import { SpielbetriebComponent } from "./spielbetrieb/spielbetrieb.component";
 
 const routes: Routes = [
   {
@@ -20,6 +21,22 @@ const routes: Routes = [
   {
     path: "trainer",
     component: TrainerComponent
+  },
+  {
+    path: "spielbetrieb",
+    component: SpielbetriebComponent
+  },
+  {
+    path: "aktiv",
+    component: SpielbetriebComponent
+  },
+  {
+    path: "jugend",
+    component: SpielbetriebComponent
+  },
+  {
+    path: "training",
+    component: SpielbetriebComponent
   },
   {
     path: "",

@@ -1,26 +1,31 @@
 .menumenu {
-    background-color: red;
+  background-color: red;
 }
 
 .menumenu li a {
-    color: white;
+  color: white;
 }
 
 .menumenu li a:hover {
-    background-color: blue;
+  background-color: blue;
 }
 
 .navbar {
-    padding: 0;
-    margin-bottom: 8px;
+  padding: 0;
+  margin-bottom: 8px;
 }
 
 .nav-item {
-    min-width: 100px;
-    border-right: 1px solid white;
+  min-width: 100px;
+  border-right: 1px solid white;
 }
 
 .nav-item a:hover {
-    color: red !important;
-    background-color: white !important;
+  color: red !important;
+  background-color: white !important;
+}
+
+.dropdown-menu {
+  background-color: red;
+  color: white;
 }

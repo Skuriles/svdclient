@@ -1,0 +1,21 @@
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" *ngIf="aktive">
+  <ngb-panel title="{{item.title}}" *ngFor="let item of activeContents">
+    <ng-template ngbPanelContent>
+      {{item.text}}
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-1" *ngIf="jugend">
+  <ngb-panel title="{{item.title}}" *ngFor="let item of jugendContents">
+    <ng-template ngbPanelContent>
+      {{item.text}}
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-2" *ngIf="training">
+  <ngb-panel title="{{item.title}}" *ngFor="let item of trainingContents">
+    <ng-template ngbPanelContent>
+      {{item.text}}
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
