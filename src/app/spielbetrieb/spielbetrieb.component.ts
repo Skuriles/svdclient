@@ -34,7 +34,7 @@ export class SpielbetriebComponent implements OnInit {
         break;
     }
   }
-
+  // TODO get files from server!!
   public activeContents = [
     {
       title: "Herren 1",
