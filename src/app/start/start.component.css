@@ -1,0 +1,18 @@
+.startGallery img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.startGallery .ui-galleria-panel {
+  position: relative;
+}
+
+.carousel-item {
+  color: yellow;
+}
+
+.carousel-item img {
+  width: 100%;
+}

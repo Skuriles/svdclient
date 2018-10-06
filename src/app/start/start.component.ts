@@ -1,11 +1,13 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { HttpService } from "../services/http.service";
 import { Post, HeaderImage } from "../classes/Posts/post";
 import { ToolsService } from "../services/tools.service";
 import { Router } from "@angular/router";
 
 @Component({
+  encapsulation: ViewEncapsulation.None,
   selector: "app-start",
+  styleUrls: ["./start.component.css"],
   templateUrl: "./start.component.html"
 })
 export class StartComponent implements OnInit {

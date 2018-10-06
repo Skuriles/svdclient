@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 import { MenuBarItem } from "./classes/helper/menuBar";
 import { HttpService } from "./services/http.service";
 
@@ -10,10 +10,17 @@ import { HttpService } from "./services/http.service";
 export class AppComponent implements OnInit {
   public menuBar: MenuBarItem[];
 
+  public bigScreen = false;
+
+  @HostListener("window:resize", ["$event"])
+  onResize(event) {
+    this.bigScreen = window.innerWidth > 990;
+  }
   constructor(private httpService: HttpService) {}
 
   ngOnInit() {
     this.getMenuBar();
+    this.bigScreen = window.innerWidth > 990;
   }
 
   public getMenuBar() {
