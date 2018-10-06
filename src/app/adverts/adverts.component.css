@@ -1,34 +1,35 @@
 .adverts {
-  float: left;
-  width: 5%;
+    float: left;
+    width: 5%;
 }
 
 @media only screen and (min-width: 601px) {
-  .adverts {
-    float: left;
-    width: 7.5%;
-  }
+    .adverts {
+        float: left;
+        width: 7.5%;
+    }
 }
 
 @media only screen and (min-width: 993px) {
-  .adverts {
-    float: left;
-    width: 15%;
-  }
+    .adverts {
+        float: left;
+        width: 15%;
+    }
 }
 
 .adverts img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .advertsImages {
-  width: 98%;
-  margin: 1%;
-  text-align: center;
+    width: 98%;
+    margin: 1%;
+    text-align: center;
+    border-bottom: 1px dashed red;
 }
 
 .adverts h5 {
-  text-align: center;
+    text-align: center;
 }

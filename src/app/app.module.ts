@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppRoutingModule } from "./app-routing.module";
@@ -30,7 +31,13 @@ import { SpielbetriebComponent } from "./spielbetrieb/spielbetrieb.component";
     DefaultArticleComponent,
     SpielbetriebComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    NgbModule
+  ],
   providers: [HttpService, ToolsService],
   bootstrap: [AppComponent]
 })
